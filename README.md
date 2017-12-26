@@ -11,7 +11,7 @@ This project was built as part of the Udacity FEND Nanodegree Project in order t
 ## Instructions
 
 * To run the test, download the repo and open index.html.
-* Alternatively, a working live link can also be found here:
+* Alternatively, a working live link can also be found here: https://amirabuhasan.github.io/feed-reader-testing/
 
 ## Resources used
 
