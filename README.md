@@ -15,6 +15,5 @@ This project was built as part of the Udacity FEND Nanodegree Project in order t
 
 ## Resources used
 
-1. Udacity Javascript Testing Course [course](https://www.udacity.com/course/ud549)
-2. Jasmine Documentation
-[Jasmine documentation](http://jasmine.github.io)
+1. [Udacity Javascript Testing Course](https://www.udacity.com/course/ud549)
+2. [Jasmine Documentation](http://jasmine.github.io)
