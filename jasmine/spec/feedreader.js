@@ -18,7 +18,7 @@ $(function() {
         // Loops through each feed in the allFeeds object and ensures it has a URL defined
         // and that the URL is not empty.
 
-         it('has a URL defined and is not empty', function() {
+         it('have a URL defined and is not empty', function() {
            allFeeds.forEach(function(feed) {
              expect(feed.url).toBeDefined();
              expect(feed.url.length).not.toBe(0);
@@ -28,7 +28,7 @@ $(function() {
         // Loops through each feed in the allFeeds object and ensures it has a name defined
         // and that the name is not empty.
 
-         it('has a name defined and is not empty', function() {
+         it('have a name defined and is not empty', function() {
            allFeeds.forEach(function(feed) {
              expect(feed.name).toBeDefined();
              expect(feed.name.length).not.toBe(0);
@@ -43,7 +43,7 @@ $(function() {
         // "body" contains the "menu-hidden" class.
 
          it("should be hidden by default", function() {
-           expect(body.className).toContain("menu-hidden");
+           expect(body.classList).toContain("menu-hidden");
          });
 
         // Ensures the menu changes visibility when the menu icon is clicked by
@@ -52,10 +52,10 @@ $(function() {
           it("should show when clicked, and hide when clicked again", function() {
             const menuIcon = $('.menu-icon-link');
             menuIcon.click();
-            expect(body.className).not.toContain("menu-hidden");
+            expect(body.classList).not.toContain("menu-hidden");
 
             menuIcon.click();
-            expect(body.className).toContain("menu-hidden");
+            expect(body.classList).toContain("menu-hidden");
           });
       });
 
@@ -65,13 +65,12 @@ $(function() {
         // Checks the length of ".entry" to see if it is greater than 0.
 
          beforeEach(function(done) {
-           loadFeed(0, function() {
-             done();
+           loadFeed(0, done);
            });
-         });
+
 
          it("should contain at least a single entry", function(done) {
-           expect($('.entry').length).toBeGreaterThan(0);
+           expect($('.feed .entry').length).toBeGreaterThan(0);
            done();
          });
       });
@@ -85,9 +84,9 @@ $(function() {
 
          beforeEach(function(done) {
            loadFeed(0, function() {
-             feed1 = document.body.innerHTML;
+             feed1 = $('.feed').html();
              loadFeed(1, function() {
-               feed2 = document.body.innerHTML;
+               feed2 = $('.feed').html();
                done();
              });
            });
